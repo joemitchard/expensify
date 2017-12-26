@@ -1,0 +1,21 @@
+html {
+  // Set 1 px = 62.5% of it's size meaning 1.1 rem = 11 px;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
