@@ -24,28 +24,3 @@ const jsx = (
 )
 
 ReactDOM.render(jsx, appRoot);
-
-// Test
-
-store.subscribe(() => {
-  const state = store.getState();
-  // const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-
-  console.log(state);
-});
-
-store.dispatch(ExpensesActions.addExpense({
-  description: 'Water Bill',
-  amount: 4500,
-}));
-
-store.dispatch(ExpensesActions.addExpense({
-  description: 'Gas Bill',
-  createdAt: 1000
-}));
-
-store.dispatch(ExpensesActions.addExpense({
-  description: 'Rent',
-  amount: 109500,
-}));
-
