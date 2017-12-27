@@ -30,9 +30,9 @@ module.exports = (env) => {
                 }
               },
               {
-                sourceMap: true,
                 loader: 'sass-loader',
                 options: {
+                  sourceMap: true,
                 }
               }
             ]
@@ -47,7 +47,7 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true // tells browser to not fetch server pages
+      historyApiFallback: true // defaults to index.html on 404
     }
   };
 }
