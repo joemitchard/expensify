@@ -6,7 +6,7 @@ import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import * as ExpensesActions from './actions/expenses';
 import * as FiltersActions from './actions/filters';
-import getVisibleExpenses from './selectors/expenses';
+import { startSetExpenses } from './actions/expenses';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
@@ -24,4 +24,9 @@ const jsx = (
   </Provider>
 )
 
-ReactDOM.render(jsx, appRoot);
+ReactDOM.render(<p>Loading...</p>, appRoot);
+
+store.dispatch(startSetExpenses()).then(() => {
+  ReactDOM.render(jsx, appRoot);
+});
+
