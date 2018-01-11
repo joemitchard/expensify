@@ -100,7 +100,7 @@ test('should setup edit expense action object', () => {
 });
 
 test('should setup on firebase', (done) => {
-  const store = createMockStore();
+  const store = createMockStore({});
   const expense = expenses[0];
   const updates = { note: 'this is new' };
   store.dispatch(startEditExpense(expense.id, updates)).then(() => {
